@@ -1,0 +1,342 @@
+/* =========================
+   PÁGINA
+========================= */
+
+
+/* Escolhe o corpo da página */
+body {
+
+    /* Tira o espaço padrão da página */
+    margin: 0;
+
+    /* Faz a página ocupar a tela inteira */
+    min-height: 100vh;
+
+    /* Coloca a imagem no fundo */
+    background-image: url("flyziken-twitch-bg-pokemon.jpg");
+
+    /* Não repete a imagem */
+    background-repeat: no-repeat;
+
+    /* Faz a imagem preencher a tela */
+    background-size: cover;
+
+    /* Coloca a imagem no centro */
+    background-position: center;
+
+    /* Deixa o fundo parado */
+    background-attachment: fixed;
+
+    /* Escolhe a fonte */
+    font-family: Arial, sans-serif;
+}
+
+
+/* =========================
+   TÍTULO
+========================= */
+
+
+/* Escolhe o título */
+.texto1 {
+
+    /* Coloca espaço ao redor do título */
+    margin: 30px auto;
+
+    /* Centraliza o texto */
+    text-align: center;
+
+    /* Deixa o texto grande */
+    font-size: 50px;
+
+    /* Deixa o texto branco */
+    color: white;
+
+    /* Coloca uma sombra no texto */
+    text-shadow: 3px 3px 5px black;
+}
+
+
+/* =========================
+   CARDS GRANDES
+========================= */
+
+
+/* Escolhe os dois grupos de cartas */
+.card {
+
+    /* Define a largura do grupo */
+    width: 650px;
+
+    /* Define a altura mínima */
+    min-height: 500px;
+
+    /* Coloca o grupo no centro */
+    margin: 30px auto;
+
+    /* Cria espaço dentro do grupo */
+    padding: 20px;
+
+    /* Organiza as cartas */
+    display: flex;
+
+    /* Coloca uma carta em cima da outra */
+    flex-direction: column;
+
+    /* Centraliza as cartas */
+    align-items: center;
+
+    /* Coloca uma cor vermelha transparente */
+    background-color: rgba(129, 33, 22, 0.85);
+
+    /* Cria uma borda */
+    border: 3px double rgb(2, 3, 4);
+
+    /* Arredonda os cantos */
+    border-radius: 15px;
+
+    /* Mantém o tamanho correto */
+    box-sizing: border-box;
+}
+
+
+
+
+/* Escolhe todas as cartas */
+.pokemon {
+
+    /* Largura da carta */
+    width: 300px;
+
+    /* Altura da carta */
+    height: 350px;
+
+    /* Faz uma carta ficar sobre a outra */
+    margin: -300px 0 0;
+
+    /* Faz a imagem não se repetir */
+    background-repeat: no-repeat;
+
+    /* Faz a imagem preencher a carta */
+    background-size: cover;
+
+    /* Centraliza a imagem */
+    background-position: center;
+
+    /* Arredonda os cantos */
+    border-radius: 15px;
+
+    /* Permite colocar a descrição dentro da carta */
+    position: relative;
+
+    /* Faz a animação ficar suave */
+    transition: transform 0.5s ease-in-out;
+
+    /* Mostra uma mãozinha */
+    cursor: pointer;
+
+    /* Esconde qualquer coisa que ultrapasse a carta */
+    overflow: hidden;
+}
+
+
+/* A primeira carta de cada grupo não fica para trás */
+.card .pokemon:first-child {
+
+    /* Remove o espaço negativo da primeira carta */
+    margin-top: 0;
+}
+
+
+
+/* Primeira imagem */
+#caixa1 {
+    background-image: url("images.jpg");
+}
+
+
+/* Segunda imagem */
+#caixa2 {
+    background-image: url("delmise.jpg");
+}
+
+
+/* Terceira imagem */
+#caixa3 {
+    background-image: url("tinkaton.jpg");
+}
+
+
+/* Quarta imagem */
+#caixa4 {
+    background-image: url("ceruledge.jpg");
+}
+
+
+/* Quinta imagem */
+#caixa5 {
+    background-image: url("golurk.jpg");
+}
+
+
+/* Sexta imagem */
+#caixa6 {
+    background-image: url("melmetal.jpg");
+}
+
+
+/* Sétima imagem */
+#caixa7 {
+    background-image: url("palossand.jpg");
+}
+
+
+/* Oitava imagem */
+#caixa8 {
+    background-image: url("Archaludon.jpg");
+}
+
+
+/* Nona imagem */
+#caixa9 {
+    background-image: url("miltank.png");
+}
+
+
+/* Décima imagem */
+#caixa10 {
+    background-image: url("vaporeon.jpg");
+}
+
+
+
+
+/* Escolhe a descrição dentro da carta */
+.descricao {
+
+    /* Faz a descrição ocupar toda a carta */
+    width: 100%;
+
+    /* Faz a descrição ocupar toda a altura */
+    height: 100%;
+
+    /* Coloca uma cor preta transparente */
+    background-color: rgba(0, 0, 0, 0.80);
+
+    /* Coloca o texto no centro */
+    display: flex;
+
+    /* Organiza o título e o texto em coluna */
+    flex-direction: column;
+
+    /* Centraliza na horizontal */
+    justify-content: center;
+
+    /* Centraliza na vertical */
+    align-items: center;
+
+    /* Centraliza o texto */
+    text-align: center;
+
+    /* Faz a descrição começar invisível */
+    opacity: 0;
+
+    /* Faz aparecer suavemente */
+    transition: opacity 0.4s ease;
+
+    /* Usa uma cor branca */
+    color: white;
+
+    /* Faz o tamanho da caixa respeitar a carta */
+    box-sizing: border-box;
+
+    /* Cria espaço dentro da descrição */
+    padding: 20px;
+}
+
+
+
+
+/* Escolhe o nome do Pokémon */
+.descricao h2 {
+
+    /* Tamanho do nome */
+    font-size: 30px;
+
+    /* Tira espaço exagerado */
+    margin: 0 0 15px 0;
+
+    /* Cria uma sombra no nome */
+    text-shadow: 2px 2px 4px black;
+}
+
+
+
+/* Escolhe o texto da descrição */
+.descricao p {
+
+    /* Tamanho do texto */
+    font-size: 18px;
+
+    /* Espaçamento entre as linhas */
+    line-height: 1.5;
+
+    /* Tira a margem padrão */
+    margin: 0;
+}
+
+
+/* Quando o mouse passar sobre a carta */
+.pokemon:hover {
+
+    /* Aumenta a carta */
+    transform: scale(1.15);
+
+    /* Coloca a carta na frente */
+    z-index: 10;
+
+    /* Coloca uma sombra brilhante */
+    box-shadow:
+        0 0 15px white,
+        0 0 30px rgba(255, 255, 255, 0.6);
+}
+
+
+/* Quando o mouse estiver sobre a carta,
+   mostra a descrição */
+.pokemon:hover .descricao {
+
+    /* Deixa a descrição visível */
+    opacity: 1;
+}
+
+
+
+/* Estas regras funcionam em telas pequenas */
+@media (max-width: 700px) {
+
+    /* Diminui o título */
+    .texto1 {
+        font-size: 35px;
+    }
+
+    /* Diminui o tamanho do grupo */
+    .card {
+        width: 90%;
+        min-height: 450px;
+    }
+
+    /* Diminui as cartas */
+    .pokemon {
+        width: 250px;
+        height: 300px;
+
+        /* Ajusta a sobreposição */
+        margin-top: -250px;
+    }
+
+    /* Mantém a primeira carta no lugar */
+    .card .pokemon:first-child {
+        margin-top: 0;
+    }
+}
